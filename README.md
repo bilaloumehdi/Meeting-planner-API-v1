@@ -25,7 +25,7 @@ To get started with the Meeting Room Planner, follow these steps:
 1. **Clone this repository** to your local machine using the following command:
 
    ```bash
-   git clone repolink
+   git clone https://github.com/bilaloumehdi/Meeting-planner-API-v1.git
 2. **Create MySQL Database:** You need to create a MySQL database with the name meeting_planner_db. Use the following command in your MySQL client:
     ```bash
     CREATE DATABASE meeting_planner_db;
