@@ -12,22 +12,6 @@ import java.util.List;
 @Repository
 public interface MeetingRoomRepository extends JpaRepository<MeetingRoom,Long> {
 
-
-        /*@Query("SELECT DISTINCT room " +
-                "FROM MeetingRoom room " +
-                "WHERE room NOT IN (SELECT DISTINCT m.meetingRoom FROM Meeting m " +
-                "                   WHERE ((m.startTime >= :desiredTime AND m.startTime < :desiredTimePlusOneHour) " +
-                "                          OR (m.endTime > :desiredTime AND m.endTime <= :desiredTimePlusOneHour)) " +
-                "                   OR ((m.startTime >= :desiredTimeMinusOneHour AND m.startTime < :desiredTime) " +
-                "                       OR (m.endTime > :desiredTimePlusTwoHours AND m.endTime <= :desiredTimePlusOneHour)) " +
-                "                   OR (m.startTime <> :desiredTime AND m.endTime <> :desiredTimePlusOneHour))")
-        List<MeetingRoom> findAvailableRoomsAtSpecificTime(
-                @Param("desiredTime") LocalDateTime desiredTime,
-                @Param("desiredTimePlusOneHour") LocalDateTime desiredTimePlusOneHour,
-                @Param("desiredTimeMinusOneHour") LocalDateTime desiredTimeMinusOneHour,
-                @Param("desiredTimePlusTwoHours") LocalDateTime desiredTimePlusTwoHours
-        );*/
-
     @Query("SELECT room " +
             "FROM MeetingRoom room " +
             "WHERE room NOT IN (SELECT m.meetingRoom FROM Meeting m " +

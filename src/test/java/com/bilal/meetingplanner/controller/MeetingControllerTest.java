@@ -105,7 +105,6 @@ class MeetingControllerTest {
         mockMvc.perform(post("/api/v1/meeting/meeting-request")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(meetingRequest)))
-
                 .andExpect(status().isBadRequest());
     }
 
