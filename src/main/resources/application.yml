@@ -1,0 +1,16 @@
+server:
+  port: 8085
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/meeting_planner_db
+    username: root
+    password: root
+
+  jpa:
+    hibernate.ddl-auto: create
+    generate-ddl: true
+    show-sql: true
+
+
